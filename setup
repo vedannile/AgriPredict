@@ -1,0 +1,14 @@
+# Set up the project structure
+mkdir AgriPredict-AI
+cd AgriPredict-AI
+
+# Initialize Git
+git init
+git branch -m main
+
+# Create folder structure
+mkdir -p frontend/src/{components,services,utils,hooks}
+mkdir -p backend/{routes,services,models,middleware,config}
+mkdir -p ml-models/{notebooks,scripts,models}
+mkdir -p data-pipeline/{scrapers,processors,schedulers}
+mkdir -p docs screenshots demo-videos
