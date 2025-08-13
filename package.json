@@ -1,0 +1,43 @@
+// Free Government Data
+const MANDI_API_BASE = 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070';
+
+// Sample API call structure
+const fetchMandiPrices = async (state, commodity) => {
+  const params = new URLSearchParams({
+    'api-key': 'YOUR_DATA_GOV_KEY', // Free registration
+    'format': 'json',
+    'filters[state]': state,
+    'filters[commodity]': commodity,
+    'limit': 100
+  });
+  
+  const response = await fetch(`${MANDI_API_BASE}?${params}`);
+  return response.json();
+};
+// OpenWeatherMap (Free tier: 1000 calls/day)
+const WEATHER_API_KEY = 'your_openweather_key';
+const WEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5';
+
+const getWeatherData = async (lat, lon) => {
+  const current = await fetch(`${WEATHER_BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`);
+  const forecast = await fetch(`${WEATHER_BASE_URL/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`);
+  
+  return {
+    current: await current.json(),
+    forecast: await forecast.json()
+  };
+};
+// NewsAPI (Free tier: 1000 requests/day)
+const NEWS_API_KEY = 'your_news_api_key';
+const NEWS_BASE_URL = 'https://newsapi.org/v2';
+
+const getAgricultureNews = async () => {
+  const response = await fetch(`${NEWS_BASE_URL}/everything?q=agriculture+farming+crop+india&apiKey=${NEWS_API_KEY}&language=en&sortBy=publishedAt&pageSize=20`);
+  return response.json();
+};
+    "scripts": {
+      "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+      "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+      "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,html}\"",
+      "check-format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,css,html}\""
+    }
