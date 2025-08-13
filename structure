@@ -1,0 +1,81 @@
+AgriPredict-AI/
+├── 📁 frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── PriceCard.jsx
+│   │   │   ├── PredictionChart.jsx
+│   │   │   ├── WeatherWidget.jsx
+│   │   │   └── MarketAnalysis.jsx
+│   │   ├── services/
+│   │   │   ├── apiService.js
+│   │   │   ├── dataProcessor.js
+│   │   │   └── mlService.js
+│   │   ├── utils/
+│   │   │   ├── constants.js
+│   │   │   └── helpers.js
+│   │   ├── hooks/
+│   │   │   └── usePriceData.js
+│   │   └── App.jsx
+│   ├── public/
+│   ├── package.json
+│   └── README.md
+├── 📁 backend/
+│   ├── routes/
+│   │   ├── prices.js
+│   │   ├── weather.js
+│   │   ├── predictions.js
+│   │   └── news.js
+│   ├── services/
+│   │   ├── dataCollector.js
+│   │   ├── mlModel.js
+│   │   └── apiIntegrator.js
+│   ├── models/
+│   │   ├── Price.js
+│   │   └── Prediction.js
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── config/
+│   │   └── database.js
+│   ├── server.js
+│   └── package.json
+├── 📁 ml-models/
+│   ├── notebooks/
+│   │   ├── data_exploration.ipynb
+│   │   ├── price_prediction_model.ipynb
+│   │   └── sentiment_analysis.ipynb
+│   ├── scripts/
+│   │   ├── train_model.py
+│   │   ├── data_pipeline.py
+│   │   └── model_evaluation.py
+│   ├── models/
+│   │   ├── price_predictor.pkl
+│   │   └── sentiment_model.pkl
+│   └── requirements.txt
+├── 📁 data-pipeline/
+│   ├── scrapers/
+│   │   ├── mandi_scraper.py
+│   │   ├── weather_collector.py
+│   │   └── news_scraper.py
+│   ├── processors/
+│   │   ├── data_cleaner.py
+│   │   └── feature_engineer.py
+│   ├── schedulers/
+│   │   └── cron_jobs.py
+│   └── config.py
+├── 📁 docs/
+│   ├── API_DOCUMENTATION.md
+│   ├── DEPLOYMENT_GUIDE.md
+│   ├── MODEL_ARCHITECTURE.md
+│   └── USER_GUIDE.md
+├── 📁 screenshots/
+│   ├── desktop_view.png
+│   ├── mobile_view.png
+│   ├── predictions_chart.png
+│   └── architecture_diagram.png
+├── 📁 demo-videos/
+│   ├── app_walkthrough.mp4
+│   └── technical_explanation.mp4
+├── .gitignore
+├── README.md
+├── LICENSE
+└── CONTRIBUTING.md
