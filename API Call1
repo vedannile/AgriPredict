@@ -1,0 +1,16 @@
+// Free Government Data
+const MANDI_API_BASE = 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070';
+
+// Sample API call structure
+const fetchMandiPrices = async (state, commodity) => {
+  const params = new URLSearchParams({
+    'api-key': '579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b', // Free registration
+    'format': 'json',
+    'filters[state]': state,
+    'filters[commodity]': commodity,
+    'limit': 100
+  });
+  
+  const response = await fetch(`${MANDI_API_BASE}?${params}`);
+  return response.json();
+};
